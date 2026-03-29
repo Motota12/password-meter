@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #222;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    direction: rtl;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 30px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #111;
+    gap: 15px;
+    padding-bottom: 70px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #00000055);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+
+.inputArea {
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+#Yourpassword {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #444;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: background 0.3s;
+}
+
+#Yourpassword:focus {
+    background: #555;
+}
+
+.show {
+    background: #444;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+    user-select: none;
+}
+
+.show:hover {
+    background: #555;
+}
+
+.strengthText {
+    color: #ccc;
+    text-align: center;
+    font-size: 18px;
+}
+
+.strengthMeter {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.bar {
+    width: 50px;
+    height: 8px;
+    border-radius: 4px;
+    background: #444;
+    transition: all 0.3s ease;
+}
+
+.tips {
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+    min-height: 20px;
+}
+
+/* Strength classes */
+.container.weak {
+    border-color: #ff4444;
+    box-shadow: 0 0 20px rgba(255,68,68,0.5);
+}
+
+.container.weak .bar:nth-child(1) { background: #ff4444; width: 50px; }
+.container.weak .bar:nth-child(n+2) { background: #444; }
+
+.container.moderate {
+    border-color: #ffaa00;
+    box-shadow: 0 0 20px rgba(255,170,0,0.5);
+}
+
+.container.moderate .bar:nth-child(1),
+.container.moderate .bar:nth-child(2) { background: #ffaa00; width: 50px; }
+.container.moderate .bar:nth-child(n+3) { background: #444; }
+
+.container.strong {
+    border-color: #44ff44;
+    box-shadow: 0 0 20px rgba(68,255,68,0.5);
+}
+
+.container.strong .bar { background: #44ff44; width: 50px; }
+
+@media (max-width: 480px) {
+    .container { width: 95%; padding: 20px; }
+    .inputArea { flex-direction: column; }
+    .show { width: 100%; }
+}

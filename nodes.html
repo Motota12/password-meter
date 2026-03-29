@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فاحص قوة كلمة المرور</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>فاحص قوة كلمة المرور</h2>
+        <div class="inputArea"> 
+            <input type="password" placeholder="أدخل كلمة المرور" id="Yourpassword">
+            <span class="show" id="togglePassword">👁️</span>
+        </div>
+        <div class="strengthText">قوة كلمة المرور: <span id="strengthLabel">ضعيفة</span></div>
+        <div class="strengthMeter">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="tips" id="tips"></div>
+    </div>
+<script src="move.js"></script>
+</body>
+</html>
